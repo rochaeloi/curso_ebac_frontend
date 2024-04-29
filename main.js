@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault();
         var novaTarefa = $('#nova-tarefa').val();
         if (novaTarefa) {
-            $('li').append('' + novaTarefa + '');
+            $('ul').append('<li>' + novaTarefa + '</li><br>');
             $('#nova-tarefa').val('');
         }
         $('ul').on('click', 'li', function() {
