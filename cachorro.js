@@ -5,9 +5,10 @@ function Cachorro(raça) {
     }
 }
 
-function Golden(raça, idade) {
+function Golden(raça, idade, nome) {
     this.raça = raça;
     this.idade = idade;
+    this.nome = nome;
 
     this.dizRaça = function() {
         console.log(this.raça)
@@ -17,13 +18,18 @@ function Golden(raça, idade) {
         console.log(this.idade)
     }
 
+    this.dizNome = function() {
+        console.log(this.nome)
+    }
+
     Cachorro.call(this, raça);
 }
 
 
-function Pincher(raça, idade) {
+function Pincher(raça, idade, nome) {
     this.raça = raça;
     this.idade = idade;
+    this.nome = nome;
 
     this.dizRaça = function() {
         console.log(this.raça)
@@ -33,11 +39,15 @@ function Pincher(raça, idade) {
         console.log(this.idade)
     }
 
+    this.dizNome = function() {
+        console.log(this.nome)
+    }
+
     Cachorro.call(this, raça);
 }
 
-const cachorro1 = new Golden("Golden", "7 anos");
-const cachorro2 = new Pincher("Pincher", "2 anos");
+const cachorro1 = new Golden("Golden", "7 anos", "Max");
+const cachorro2 = new Pincher("Pincher", "2 anos", "Jorge");
 
 cachorro1.dizIdade();
 console.log(cachorro1);
